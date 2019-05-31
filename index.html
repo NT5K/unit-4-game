@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Gem Game</title>
+</head>
+
+<body>
+
+    <header class="jumbotron text-center mr-3 ml-3 mt-3">
+        <h1>Gem Game</h1>
+        <h6 class="text-center">Instrustions:<br>
+            <small>There will be four crystals displayed as buttons on the page.
+        The player will be shown a random number at the start of the game.
+        When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
+        Your game will hide this amount until the player clicks a crystal.
+        When they do click one, update the player's score counter.
+        The player wins if their total score matches the random number from the beginning of the game.
+        The player loses if their score goes above the random number.
+        The game restarts whenever the player wins or loses.
+        When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden
+        values. Of course, the user's score (and score counter) will reset to zero.
+        The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to
+        restart the game.</small></h6>
+    </header>
+
+    <div class="container">
+        <!-- random number -->
+       <div class="row pb-2">
+            <div class="col-5 bg-info">
+                <p id="random-number"></p>
+            </div>
+            <div class="col-1"></div>
+            <!--  -->
+            <div class="col-3 bg-secondary text-warning">
+               <p id="win-or-loss"> (You Won! / You Lost!)</p> <hr>
+                <p id="win-count">Wins:</p> <hr>
+                <p id="loss-count">Losses:</p>
+            </div>
+             <div class="col-2"></div>
+       </div>
+       
+       <div class="row">
+            <div class="col-1">
+                <button type="button" class="btn btn-primary" id="button-1" value="">Gem 1</button>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-warning" id="button-2" value="">Gem 2</button>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-success" id="button-3" value="">Gem 3</button>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-danger" id="button-4" value="">Gem 4</button>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-4 bg-dark text-white" id="sum-of-buttons">
+                Sum of randomly generated number from button presses:
+            </div>
+       </div>
+    </div>
+</body>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</html>
