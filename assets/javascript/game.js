@@ -22,9 +22,7 @@ let button2Num = randomNumberForButtons();
 let button3Num = randomNumberForButtons();
 let button4Num = randomNumberForButtons();
 
-$("#sum-of-buttons").text(sumOfButtons);
-
-
+$("#sum-of-buttons").text(buttonsAddedTogether);
 
 
 // $("#random-number").text(randomNumber)
@@ -41,25 +39,32 @@ $('#button-1').click(function () {
     button1Num;
     //takes new random number and updates the id of said button
     $("#sum-of-buttons").text(button1Num);
+    //look into array for testing
+    $("#look-into-array").text(buttonsAddedTogether);
     // adds the number to the buttonsAddedTogether array
     buttonsAddedTogether.push(button1Num);
 });
 
+
+
 $('#button-2').click(function () {
     button2Num;
     $("#sum-of-buttons").text(button2Num);
+    $("#look-into-array").text(buttonsAddedTogether);
     buttonsAddedTogether.push(button2Num);
 });
 
 $('#button-3').click(function () {
     button3Num;
     $("#sum-of-buttons").text(button3Num);
+    $("#look-into-array").text(buttonsAddedTogether);
     buttonsAddedTogether.push(button3Num);
 });
 
 $('#button-4').click(function () {
     button4Num;
     $("#sum-of-buttons").text(button4Num);
+    $("#look-into-array").text(buttonsAddedTogether);
     buttonsAddedTogether.push(button4Num);
 });
 

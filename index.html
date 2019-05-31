@@ -16,27 +16,20 @@
 <body>
 
     <header class="jumbotron text-center mr-3 ml-3 mt-3">
-        <h1>Gem Game</h1>
-        <h6 class="text-center">Instrustions:<br>
-            <small>There will be four crystals displayed as buttons on the page.
-        The player will be shown a random number at the start of the game.
-        When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
-        Your game will hide this amount until the player clicks a crystal.
-        When they do click one, update the player's score counter.
-        The player wins if their total score matches the random number from the beginning of the game.
-        The player loses if their score goes above the random number.
-        The game restarts whenever the player wins or loses.
-        When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden
-        values. Of course, the user's score (and score counter) will reset to zero.
-        The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to
-        restart the game.</small></h6>
+        <h1><u>Gem Game</u></h1>
+        <h6 class="text-center">Instrustions:</h6>
+            You will be given a random number at the start of the game.<br>
+            There are four buttons below. Clicking a button will add a spacific amount of points to your total score.<br>
+            You win by matching your total score to random number, you lose the game if your total score goes above random number.<br>
+            the value of each button is hidden from you until you click on it.<br>
+            each time when the game starts, the game will change the values of each crystal.
     </header>
 
     <div class="container">
         <!-- random number -->
        <div class="row pb-2">
             <div class="col-5 bg-info">
-                <p id="random-number"></p>
+                Random Number:<p id="random-number"></p>
             </div>
             <div class="col-1"></div>
             <!--  -->
@@ -61,10 +54,13 @@
             <div class="col-1">
                 <button type="button" class="btn btn-danger" id="button-4" value="">Gem 4</button>
             </div>
+            <!-- <div class="col-1"></div> -->
             <div class="col-1"></div>
-            <div class="col-4 bg-dark text-white" id="sum-of-buttons">
-                Sum of randomly generated number from button presses:
+            <div class="col-4 bg-dark text-white">
+                Number from button press:<p id="sum-of-buttons"></p>
+                Array from button presses:<p id="look-into-array"></p>
             </div>
+            
        </div>
     </div>
 </body>
