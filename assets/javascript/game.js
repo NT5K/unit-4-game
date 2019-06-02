@@ -55,14 +55,14 @@ function winOrLoose() {
 if (total === randomNumber) {
     wins++;
     $('#win-count').text(wins);
-    $('#win-or-loss').text("You Won!");
+    $('#win-or-loss').text("You Won!").css('color', 'green');
     
     resetGame();
 }
 else if (total > randomNumber) {
     losses++;
     $('#loss-count').text(losses);
-    $('#win-or-loss').text("You Lost!");
+    $('#win-or-loss').text("You Lost!").css('color', 'red');
     resetGame();
 }
 }
@@ -77,5 +77,3 @@ function resetGame() {
     total = 0;
     $('#sum-of-buttons').text(total);
 }
-
-

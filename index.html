@@ -13,69 +13,77 @@
     <title>Gem Game</title>
 </head>
 
-<body>
+<body> 
 
+    <!-- instructions -->  
     <header class="container text-center">
         <h1><u>Gem Game</u></h1>
         <h6 class="text-center">Instrustions:</h6>
-        <div class="row bg-secondary text-white mb-2">
-                <div class="col-2">
-                    You will be given a random number at the start of the game.
-                </div>
-                <div class="col-2">
-                    There are four buttons below. Clicking a button will add a spacific amount of points to your total score.
-                </div>
-                <div class="col-2">
-                    You win by matching your total score to random number, you lose the game if your total score goes above random number.
-                </div>
-                <div class="col-2">
-                    Each time when the game starts, the game will change the values of each crystal. Value is hidden.
-                </div>
-                <div class="col-2">
-                    You will be given a random number at the start of the game.
-                </div>
-                <div class="col-2">
-                    You will be given a random number at the start of the game.
-                </div>
+        <div class="row bg-secondary text-white mb-2 p-1">
+            <div class="col-lg-2 border">
+                You will be given a random number at the start of a new game.
             </div>
+            <div class="col-lg-2 border">
+                Clicking a gem will add a spacific amount of points to your total score.
+            </div>
+            <div class="col-lg-2 border">
+                You win by matching the total score with the random number.
+            </div>
+            <div class="col-lg-2 border">
+                You loose when the total score becomes greater than the random number.
+            </div>
+            <div class="col-lg-2 border">
+                When a new game starts, each gem will have a new, hidden random value.
+            </div>
+            <div class="col-lg-2 border">
+                Check out my portfolio! <a href="https://nt5k.github.io" target="blank" style="color:white">NT5K.GITHUB.IO</a>
+            </div>
+        </div>
     </header>
 
+    <!-- outcome, wins, losses -->
     <div class="container">
+        <div class="row pb-2"> 
+            <div class="col-4 p-2 bg-dark text-white border">
+                <span id="win-or-loss" class="font-weight-bold"></span>
+            </div>
+            <div class="col-4 p-2 bg-dark text-white border">
+                Wins: <span id="win-count" class="font-weight-bold text-success"></span>
+            </div>  
+            <div class="col-4 p-2 bg-dark text-white border">
+                Losses: <span id="loss-count" class="font-weight-bold text-danger"></span>
+            </div>
+        </div>
+
         <!-- random number -->
        <div class="row pb-2">
-            <div class="col-5 bg-info">
-                Random Number:<p id="random-number"></p>
-            </div>
-            <div class="col-1"></div>
-            <!--  -->
-            <div class="col-3 bg-secondary text-warning">
-                Outcome: <span id="win-or-loss"></span> <hr>
-                Wins: <span id="win-count"></span> <hr>
-                Losses:<span id="loss-count"></span>
-            </div>
-             <div class="col-2"></div>
-       </div>
-       
-       <div class="row">
-            <div class="col-1">
-                <button type="button" class="btn btn-primary gem" id="button-1" value="">Gem 1</button>
-            </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-warning gem" id="button-2" value="">Gem 2</button>
-            </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-success gem" id="button-3" value="">Gem 3</button>
-            </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-danger gem" id="button-4" value="">Gem 4</button>
-            </div>
-            <!-- <div class="col-1"></div> -->
-            <div class="col-1"></div>
-            <div class="col-4 bg-dark text-white">
-                Total: <span id="sum-of-buttons"></span>
+            <div class="col-6 bg-info border p-2">
+                 Random Number: <span id="random-number" class="font-weight-bold"></span>
             </div>
             
-       </div>
+            <!-- total -->
+            <div class="col-6 bg-secondary text-warning border p-2">    
+                Total Score: <span id="sum-of-buttons" class="font-weight-bold"></span>
+            </div>
+        </div>
+
+        <!-- buttons -->
+        <div id="buttons" class="row pb-2">
+            <div class="col-3">
+                <button type="button border" class="btn" id="button-1" value=""><img src="assets/images/yellow.png"></button>
+            </div>
+            <div class="col-3">
+                <button type="button border" class="btn" id="button-2" value=""><img src="assets/images/green.png"></button>
+            </div>
+            <div class="col-3">
+                <button type="button border" class="btn" id="button-3" value=""><img src="assets/images/red.png"></button>
+            </div>
+            <div class="col-3">
+                <button type="button border" class="btn" id="button-4" value=""><img src="assets/images/blue.png"></button>
+            </div>
+        </div>    
+            
+            
     </div>
 </body>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
