@@ -1,8 +1,8 @@
 
 // variables
+let randomNumber = Math.floor(Math.random() * 101) + 19;
 let wins = 0;
 let losses = 0;
-let randomNumber = Math.floor(Math.random() * 101) + 19;
 let total = 0;
 let button1Num = Math.floor(Math.random() * 11) + 1;
 let button2Num = Math.floor(Math.random() * 11) + 1;
@@ -20,7 +20,7 @@ console.log(button4Num)
 console.log(total)
 
 
-// update id's with var's
+// update id's with vars
 $("#random-number").html(randomNumber);
 $("#loss-count").html(losses);
 $('#win-count').text(wins);
@@ -30,34 +30,34 @@ $('#win-count').text(wins);
 $('#button-1').click(function () {
     total += button1Num;
     $("#sum-of-buttons").html(total);
-    winOrLoose()
+    winOrLose()
 })
 
 $('#button-2').click(function () {
     total += button2Num;
     $("#sum-of-buttons").html(total);
-    winOrLoose()
+    winOrLose()
 })
 
 $('#button-3').click(function () {
     total += button3Num;
     $("#sum-of-buttons").html(total);
-    winOrLoose()
+    winOrLose()
 })
 
 $('#button-4').click(function () {
     total += button4Num;
     $("#sum-of-buttons").html(total);
-    winOrLoose()
+    winOrLose()
 })
     
-function winOrLoose() {
+function winOrLose() {
 if (total === randomNumber) {
     wins++;
     $('#win-count').text(wins);
     $('#win-or-loss').text("You Won!").css('color', 'green');
-    
     resetGame();
+    
 }
 else if (total > randomNumber) {
     losses++;
