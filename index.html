@@ -15,14 +15,29 @@
 
 <body>
 
-    <header class="jumbotron text-center mr-3 ml-3 mt-3">
+    <header class="container text-center">
         <h1><u>Gem Game</u></h1>
         <h6 class="text-center">Instrustions:</h6>
-            You will be given a random number at the start of the game.<br>
-            There are four buttons below. Clicking a button will add a spacific amount of points to your total score.<br>
-            You win by matching your total score to random number, you lose the game if your total score goes above random number.<br>
-            the value of each button is hidden from you until you click on it.<br>
-            each time when the game starts, the game will change the values of each crystal.
+        <div class="row bg-secondary text-white mb-2">
+                <div class="col-2">
+                    You will be given a random number at the start of the game.
+                </div>
+                <div class="col-2">
+                    There are four buttons below. Clicking a button will add a spacific amount of points to your total score.
+                </div>
+                <div class="col-2">
+                    You win by matching your total score to random number, you lose the game if your total score goes above random number.
+                </div>
+                <div class="col-2">
+                    Each time when the game starts, the game will change the values of each crystal. Value is hidden.
+                </div>
+                <div class="col-2">
+                    You will be given a random number at the start of the game.
+                </div>
+                <div class="col-2">
+                    You will be given a random number at the start of the game.
+                </div>
+            </div>
     </header>
 
     <div class="container">
@@ -34,31 +49,30 @@
             <div class="col-1"></div>
             <!--  -->
             <div class="col-3 bg-secondary text-warning">
-               <p id="win-or-loss"> (You Won! / You Lost!)</p> <hr>
-                <p id="win-count">Wins:</p> <hr>
-                <p id="loss-count">Losses:</p>
+                Outcome: <span id="win-or-loss"></span> <hr>
+                Wins: <span id="win-count"></span> <hr>
+                Losses:<span id="loss-count"></span>
             </div>
              <div class="col-2"></div>
        </div>
        
        <div class="row">
             <div class="col-1">
-                <button type="button" class="btn btn-primary" id="button-1" value="">Gem 1</button>
+                <button type="button" class="btn btn-primary gem" id="button-1" value="">Gem 1</button>
             </div>
             <div class="col-1">
-                <button type="button" class="btn btn-warning" id="button-2" value="">Gem 2</button>
+                <button type="button" class="btn btn-warning gem" id="button-2" value="">Gem 2</button>
             </div>
             <div class="col-1">
-                <button type="button" class="btn btn-success" id="button-3" value="">Gem 3</button>
+                <button type="button" class="btn btn-success gem" id="button-3" value="">Gem 3</button>
             </div>
             <div class="col-1">
-                <button type="button" class="btn btn-danger" id="button-4" value="">Gem 4</button>
+                <button type="button" class="btn btn-danger gem" id="button-4" value="">Gem 4</button>
             </div>
             <!-- <div class="col-1"></div> -->
             <div class="col-1"></div>
             <div class="col-4 bg-dark text-white">
-                Number from button press:<p id="sum-of-buttons"></p>
-                Array from button presses:<p id="look-into-array"></p>
+                Total: <span id="sum-of-buttons"></span>
             </div>
             
        </div>
