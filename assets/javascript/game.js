@@ -11,16 +11,10 @@ let button2Num = Math.floor(Math.random() * 11) + 1;
 let button3Num = Math.floor(Math.random() * 11) + 1;
 let button4Num = Math.floor(Math.random() * 11) + 1;
 
-//tests
-console.log("random number = " + randomNumber)
-console.log("buttons added together is " + total)
-
-
 // update id's with vars
 $("#random-number").html(randomNumber);
 $("#loss-count").html(losses);
 $('#win-count').text(wins);
-
 
 //buttons
 $('#button-1').click(function () {
@@ -30,54 +24,54 @@ $('#button-1').click(function () {
     $("#sum-of-buttons").html(total);
     //check if you won or lost
     winOrLose()
-    console.log("button 1 is " + button1Num + " new total is " + total )
+    console.log("button 1 is " + button1Num + " new total is " + total)
 })
 
 $('#button-2').click(function () {
     total += button2Num;
     $("#sum-of-buttons").html(total);
     winOrLose()
-    console.log("button 2 is " + button2Num)
+    console.log("button 2 is " + button2Num + " new total is " + total)
 })
 
 $('#button-3').click(function () {
     total += button3Num;
     $("#sum-of-buttons").html(total);
     winOrLose()
-    console.log("button 3 is " + button3Num)
+    console.log("button 3 is " + button3Num + " new total is " + total)
 })
 
 $('#button-4').click(function () {
     total += button4Num;
     $("#sum-of-buttons").html(total);
     winOrLose()
-    console.log("button 4 is " + button4Num)
+    console.log("button 4 is " + button4Num + " new total is " + total)
 })
     
 function winOrLose() {
-if (total === randomNumber) {
-    //add one to wins count
-    wins++;
-    //update win count text with updated win amount
-    $('#win-count').text(wins);
-    //alert box shows that you won with color green
-    $('#win-or-loss').text("You Won!").css('color', 'green');
-    console.log("You won " + wins + " times!")
-    //pick new random numbers
-    resetGame();
-    
-}
-else if (total > randomNumber) {
-    //add one to loss count
-    losses++;
-    //update loss count text with updated loss amount
-    $('#loss-count').text(losses);
-    //alert box shows that you lost with color red
-    $('#win-or-loss').text("You Lost!").css('color', 'red');
-    console.log("You lost " + losses + " times!")
-    //pick new random numbers
-    resetGame();
-}
+    if (total === randomNumber) {
+        //add one to wins count
+        wins++;
+        //update win count text with updated win amount
+        $('#win-count').text(wins);
+        //alert box shows that you won with color green
+        $('#win-or-loss').text("You Won!").css('color', 'green');
+        console.log("You won " + wins + " times!")
+        //pick new random numbers
+        resetGame();
+        
+    }
+    else if (total > randomNumber) {
+        //add one to loss count
+        losses++;
+        //update loss count text with updated loss amount
+        $('#loss-count').text(losses);
+        //alert box shows that you lost with color red
+        $('#win-or-loss').text("You Lost!").css('color', 'red');
+        console.log("You lost " + losses + " times!")
+        //pick new random numbers
+        resetGame();
+    }
 }
 
 function resetGame() {
